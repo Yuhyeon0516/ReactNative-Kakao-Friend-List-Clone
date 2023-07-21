@@ -2,7 +2,7 @@ import { View, Text, Image } from "react-native";
 import React from "react";
 import Margin from "./Margin";
 
-const MyProfile = ({ uri, name, introduction }) => {
+const Profile = ({ uri, name, introduction }) => {
   return (
     <View style={{ flexDirection: "row" }}>
       <Image source={{ uri: uri }} style={{ width: 50, height: 50, borderRadius: 20 }} />
@@ -15,4 +15,4 @@ const MyProfile = ({ uri, name, introduction }) => {
   );
 };
 
-export default MyProfile;
+export default Profile;
