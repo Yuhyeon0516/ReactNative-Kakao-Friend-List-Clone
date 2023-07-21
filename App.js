@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native";
 import Header from "./src/components/Header";
-import MyProfile from "./src/components/MyProfile";
+import Profile from "./src/components/Profile";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { friendProfiles, myProfile } from "./src/data";
 import Margin from "./src/components/Margin";
@@ -18,11 +18,12 @@ export default function App() {
       <SafeAreaView style={styles.container}>
         <Header />
         <Margin height={10} />
-        <MyProfile uri={myProfile.uri} name={myProfile.name} introduction={myProfile.introduction} />
+        <Profile uri={myProfile.uri} name={myProfile.name} introduction={myProfile.introduction} />
         <Margin height={15} />
         <Division />
         <Margin height={12} />
         <FriendSection friendProfileLen={friendProfiles.length} onPressArrow={onPressArrow} />
+        <FriendList datas={friendProfiles} />
       </SafeAreaView>
     </SafeAreaProvider>
   );
