@@ -2,8 +2,8 @@ import { View, Text, ScrollView } from "react-native";
 import Profile from "./Profile";
 import Margin from "./Margin";
 
-const FriendList = ({ datas }) => {
-  return (
+const FriendList = ({ datas, isOpend }) => {
+  return isOpend ? (
     <ScrollView showsVerticalScrollIndicator={false}>
       {datas.map((data, index) => (
         <View key={index}>
@@ -13,7 +13,7 @@ const FriendList = ({ datas }) => {
       ))}
       <Margin height={10} />
     </ScrollView>
-  );
+  ) : null;
 };
 
 export default FriendList;
